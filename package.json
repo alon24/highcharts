@@ -11,7 +11,6 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "ace-builds": "^1.4.12",
-    "cypress": "^7.7.0",
     "highcharts": "^9.1.2",
     "highcharts-react-official": "^3.0.0",
     "react": "^17.0.2",
@@ -24,6 +23,7 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "cypress": "^7.7.0",
     "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
