@@ -32,6 +32,7 @@ export const Editor: React.FC<any> = (props: IEditor) => {
     const [chartData, setChartData] = useState("test123");
 
     function handleChange(newValue: any) {
+        setChartData(newValue);
         onChange && onChange(newValue);
     }
 
