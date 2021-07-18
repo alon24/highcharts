@@ -1,0 +1,41 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
+    ],
+    "plugins": ["prettier"],
+    "rules": {
+        "jsx-alignment": "off",
+        "jsx-no-multiline-js": "off",
+        "react/jsx-curly-spacing": "error",
+        "react/prop-types": "off",
+        "object-literal-sort-keys": "off",
+        "jsx-no-lambda": "off",
+        "max-len": ["error", {"code": 160, "ignoreUrls": true, "ignoreTemplateLiterals": true, "ignoreComments": true}],
+        "trailing-comma": ["off"],
+        "quotemark": "off",
+        "no-shadowed-variable": "off",
+        "one-line": "off",
+        "jsx-wrap-multiline": "off",
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-use-before-define": "off",
+        "prettier/prettier": ["error"],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off"
+    }
+}
