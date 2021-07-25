@@ -59,10 +59,6 @@ export interface IAppContext {
     pieChartSliceGap: number;
     setPieChartSliceGap: (gap: number) => void;
 
-    // Sets if the pieChart should be a pie or dougnut
-    isPieChart: boolean;
-    setIsPieChart: (isPieChart: boolean) => void;
-
     /**
      * 3D Section Props
      */
@@ -114,9 +110,6 @@ export const AppContext = React.createContext<IAppContext>({
 
     pieChartSliceGap: 2,
     setPieChartSliceGap: noopFunc,
-
-    isPieChart: false,
-    setIsPieChart: noopFunc,
 
     alphaAngle: 0,
     setAlphaAngle: noopFunc,

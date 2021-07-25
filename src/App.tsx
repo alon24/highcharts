@@ -46,8 +46,6 @@ export const App: React.FC = () => {
      */
     // Sets the distance between pieChart pieces
     const [pieChartSliceGap, setPieChartSliceGap] = useState(3);
-    // If not piechart - then its doughnut
-    const [isPieChart, setIsPieChart] = useState(false);
 
     /**
      * 3D Section Props
@@ -95,9 +93,6 @@ export const App: React.FC = () => {
 
         pieChartSliceGap: pieChartSliceGap,
         setPieChartSliceGap: (gap: number) => setPieChartSliceGap(gap),
-
-        isPieChart: isPieChart,
-        setIsPieChart: (isPieChart: boolean) => setIsPieChart(isPieChart),
 
         alphaAngle: alphaAngle,
         setAlphaAngle: (alpha: number) => setAlphaAngle(alpha),
