@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components/macro";
 import { Consumer, ConsumerB } from "../src/Consumer/Consumer";
+import { Main } from "./components/Main/Main";
 
 export const Container = styled.div`
     display: flex;
@@ -11,12 +12,13 @@ export const Container = styled.div`
 `;
 
 export const App: React.FC = () => {
-    return (
-        <>
-            <Consumer />
-            <br />
-            <br />
-            <ConsumerB />
-        </>
-    );
+    return <Main />;
+    // return (
+    //     <>
+    //         <Consumer />
+    //         <br />
+    //         <br />
+    //         <ConsumerB />
+    //     </>
+    // );
 };
