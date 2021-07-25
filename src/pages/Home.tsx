@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import { Wrapper } from "../components/styles";
-import { Editor } from "../components/Editor";
-import { Display } from "../components/Display";
-import { GraphConfigPanel } from "../components/GraphConfigPanel";
-import { TypesComponent } from "../components/typesComponent";
 import { IconSidebar, IconSidebarItem } from "@similarweb/ui-components/dist/icon-sidebar";
+import { ControlPanel } from "../components/ControlPanel/ControlPanel";
+import { Main } from "../components/Main/Main";
 
 export const Container = styled.div`
     display: flex;
@@ -16,29 +13,25 @@ export const Container = styled.div`
 `;
 
 export const Home: React.FC<any> = () => {
-    const [data, setData] = useState("");
+    return <Main />;
 
-    function handleChange(data: string) {
-        setData(JSON.parse(data));
-    }
-
-    return (
-        <React.Fragment>
-            <Container>
-                <IconSidebar>
-                    <IconSidebarItem title={"Donut"} icon={"apps"} />
-                    <IconSidebarItem title={"Bar"} icon={"apps"} />
-                    <IconSidebarItem title={"Kuku"} icon={"apps"} />
-                </IconSidebar>
-                <Wrapper>
-                    <TypesComponent />
-                    <Wrapper flexDirection={"rows"}>
-                        <GraphConfigPanel />
-                        <Display data={data} />
-                    </Wrapper>
-                    {/*<Editor onChange={handleChange} />*/}
-                </Wrapper>
-            </Container>
-        </React.Fragment>
-    );
+    // return (
+    //     <React.Fragment>
+    //         <Container>
+    //             <IconSidebar>
+    //                 <IconSidebarItem title={"Donut"} icon={"apps"} />
+    //                 <IconSidebarItem title={"Bar"} icon={"apps"} />
+    //                 <IconSidebarItem title={"Kuku"} icon={"apps"} />
+    //             </IconSidebar>
+    //             <Wrapper>
+    //                 <TypesComponent />
+    //                 <Wrapper flexDirection={"rows"}>
+    //                     <GraphConfigPanel />
+    //                     <Display data={data} />
+    //                 </Wrapper>
+    //                 {/*<Editor onChange={handleChange} />*/}
+    //             </Wrapper>
+    //         </Container>
+    //     </React.Fragment>
+    // );
 };

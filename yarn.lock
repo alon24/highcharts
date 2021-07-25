@@ -1589,7 +1589,7 @@
 
 "@similarweb/icons@1.3.43":
   version "1.3.43"
-  resolved "https://npm-registry.similarweb.io/repository/similarweb-npm/@similarweb/icons/-/icons-1.3.43.tgz#05d8487343c5e957143e51be0e334bd2efdc472d"
+  resolved "https://nexus.similarweb.io/repository/similar-npmjs/@similarweb/icons/-/icons-1.3.43.tgz#05d8487343c5e957143e51be0e334bd2efdc472d"
   integrity sha512-h1cLVhlGfbjW+Z1giwzRDQc+qruTyy58sOfIIMjlIleaQ8VzebRdhy473bUl9t0a9Dal+l161Ot0XJetfrCr8g==
   dependencies:
     react "^16.13.1"
@@ -1597,22 +1597,22 @@
 
 "@similarweb/styles@0.3.6":
   version "0.3.6"
-  resolved "https://npm-registry.similarweb.io/repository/similarweb-npm/@similarweb/styles/-/styles-0.3.6.tgz#72890b3c8c15b8a9066ead46fc889b0f1a41e29e"
+  resolved "https://nexus.similarweb.io/repository/similar-npmjs/@similarweb/styles/-/styles-0.3.6.tgz#72890b3c8c15b8a9066ead46fc889b0f1a41e29e"
   integrity sha512-ItSVwhS2zq1T4Qf8V0aT1OqaLES51yz1gQvTFKgda8wUynQQK0344NZod3knwb/KwrAoz9xnQCp7/mlH7e0j0g==
 
 "@similarweb/sw-i18n@^2.0.1":
   version "2.0.1"
-  resolved "https://npm-registry.similarweb.io/repository/similarweb-npm/@similarweb/sw-i18n/-/sw-i18n-2.0.1.tgz#2669ad17a31e6f88690412d56a91c7cd1b65aa3f"
+  resolved "https://nexus.similarweb.io/repository/similar-npmjs/@similarweb/sw-i18n/-/sw-i18n-2.0.1.tgz#2669ad17a31e6f88690412d56a91c7cd1b65aa3f"
   integrity sha512-AWpHM6+BIOpe79y4Su+JN5H52scdNxWd+buy7lmFEP6LAxTX1a3OHUOBoIPqyxh78sUXU5dizqSPLe0jlN7wNw==
 
 "@similarweb/sw-log@^2.0.2":
   version "2.0.2"
-  resolved "https://npm-registry.similarweb.io/repository/similarweb-npm/@similarweb/sw-log/-/sw-log-2.0.2.tgz#b6da9db5d6940262b6e889011fc1f4607ab55b77"
+  resolved "https://nexus.similarweb.io/repository/similar-npmjs/@similarweb/sw-log/-/sw-log-2.0.2.tgz#b6da9db5d6940262b6e889011fc1f4607ab55b77"
   integrity sha512-insWIBVkngpFr/Go9OvEgL5hdp5EQxs+x5suFXBwYgT1dl+E7x/Xd3dMK11UXY7y8RzapdlaHiQNj4zGG5iGQw==
 
 "@similarweb/ui-components@5.3.7", "@similarweb/ui-components@^5.3.7":
   version "5.3.7"
-  resolved "https://npm-registry.similarweb.io/repository/similarweb-npm/@similarweb/ui-components/-/ui-components-5.3.7.tgz#95fbbfdf2abb5aad0a29810d2288d9258ca5bcb5"
+  resolved "https://nexus.similarweb.io/repository/similar-npmjs/@similarweb/ui-components/-/ui-components-5.3.7.tgz#95fbbfdf2abb5aad0a29810d2288d9258ca5bcb5"
   integrity sha512-r904bdj/ACx7f6RBYojNJRN3+K/ZkSvA7oheTK9Kgzq30I27fOiNve3CLkARfQbCOB6t1JwOW/LWgXPNcS3gmQ==
   dependencies:
     "@similarweb/sw-i18n" "^2.0.1"
