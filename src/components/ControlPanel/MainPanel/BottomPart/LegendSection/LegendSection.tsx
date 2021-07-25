@@ -1,5 +1,5 @@
 import { PanelSection } from "../../../../Common/PanelSection/PanelSection";
 
-export const LegendSection = () => {
-    return <PanelSection text={"Legend"} isOpened={false} />;
+export const LegendSection = (props: { isOpen: boolean; onToggle: (isOpen: boolean) => void }) => {
+    return <PanelSection text={"Legend"} isOpened={props.isOpen} onToggle={props.onToggle} />;
 };

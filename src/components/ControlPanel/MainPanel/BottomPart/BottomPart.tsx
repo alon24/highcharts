@@ -11,18 +11,30 @@ import { AppContext } from "../../../../AppContext/AppContext";
 import { Title } from "../../../Common/Title/Title";
 
 export const BottomPart: React.FunctionComponent = () => {
-    const { graphType } = useContext(AppContext);
+    const {
+        graphType,
+        isHeaderSectionOpen,
+        isGraphSectionOpen,
+        isLegendSectionOpen,
+        is3DSectionOpen,
+        isTooltipSectionOpen,
+        setIsHeaderSectionOpen,
+        setIsGraphSectionOpen,
+        setIsTooltipSectionOpen,
+        setIsLegendSectionOpen,
+        setIs3DSectionOpen,
+    } = useContext(AppContext);
 
     return (
         <BottomPartContainer>
             <TitleWrapper>
                 <Title text={`${graphType} Chart`} />
             </TitleWrapper>
-            <HeaderSection />
-            <LegendSection />
-            <GraphSection />
-            <TooltipSection />
-            <ThreeDimSection />
+            <HeaderSection isOpen={isHeaderSectionOpen} onToggle={setIsHeaderSectionOpen} />
+            <LegendSection isOpen={isLegendSectionOpen} onToggle={setIsLegendSectionOpen} />
+            <GraphSection isOpen={isGraphSectionOpen} onToggle={setIsGraphSectionOpen} />
+            <TooltipSection isOpen={isTooltipSectionOpen} onToggle={setIsTooltipSectionOpen} />
+            <ThreeDimSection isOpen={is3DSectionOpen} onToggle={setIs3DSectionOpen} />
         </BottomPartContainer>
     );
 };

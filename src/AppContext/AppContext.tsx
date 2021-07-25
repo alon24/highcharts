@@ -14,6 +14,18 @@ export interface IAppContext {
     setIs3DGraph: (is3d: boolean) => void;
     setDataSet: (dataSet: DataSet) => void;
     setSeriesCount: (count: number) => void;
+
+    isHeaderSectionOpen: boolean;
+    isLegendSectionOpen: boolean;
+    isGraphSectionOpen: boolean;
+    isTooltipSectionOpen: boolean;
+    is3DSectionOpen: boolean;
+
+    setIsHeaderSectionOpen: (isOpen: boolean) => void;
+    setIsLegendSectionOpen: (isOpen: boolean) => void;
+    setIsGraphSectionOpen: (isOpen: boolean) => void;
+    setIsTooltipSectionOpen: (isOpen: boolean) => void;
+    setIs3DSectionOpen: (isOpen: boolean) => void;
 }
 
 export const AppContext = React.createContext<IAppContext>({
@@ -27,4 +39,16 @@ export const AppContext = React.createContext<IAppContext>({
     setGraphType: noopFunc,
     setIs3DGraph: noopFunc,
     setSeriesCount: noopFunc,
+
+    isHeaderSectionOpen: true,
+    isLegendSectionOpen: false,
+    isGraphSectionOpen: false,
+    isTooltipSectionOpen: false,
+    is3DSectionOpen: false,
+
+    setIsHeaderSectionOpen: noopFunc,
+    setIsLegendSectionOpen: noopFunc,
+    setIsGraphSectionOpen: noopFunc,
+    setIsTooltipSectionOpen: noopFunc,
+    setIs3DSectionOpen: noopFunc,
 });

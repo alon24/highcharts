@@ -15,6 +15,12 @@ export const App: React.FC = () => {
     const [dataSet, setDataSet] = useState<DataSet>("Gender");
     const [seriesCount, setSeriesCount] = useState<number>(2);
 
+    const [isHeaderSectionOpen, setIsHeaderSectionOpen] = useState(true);
+    const [isLegendSectionOpen, setIsLegendSectionOpen] = useState(false);
+    const [isGraphSectionOpen, setIsGraphSectionOpen] = useState(false);
+    const [isTooltipSectionOpen, setIsTooltipSectionOpen] = useState(false);
+    const [is3DSectionOpen, setIs3DSectionOpen] = useState(false);
+
     const handleSelectGraphType = useCallback(
         (type: GraphType) => {
             setSelectedGraphType(type);
@@ -61,6 +67,18 @@ export const App: React.FC = () => {
         setIs3DGraph: handleSetIs3DGraph,
         setDataSet: handleSelectDataSet,
         setSeriesCount: handleSetSeriesCount,
+
+        isHeaderSectionOpen: isHeaderSectionOpen,
+        isLegendSectionOpen: isLegendSectionOpen,
+        isGraphSectionOpen: isGraphSectionOpen,
+        isTooltipSectionOpen: isTooltipSectionOpen,
+        is3DSectionOpen: is3DSectionOpen,
+
+        setIsHeaderSectionOpen: (isOpen) => setIsHeaderSectionOpen(isOpen),
+        setIsLegendSectionOpen: (isOpen) => setIsLegendSectionOpen(isOpen),
+        setIsGraphSectionOpen: (isOpen) => setIsGraphSectionOpen(isOpen),
+        setIsTooltipSectionOpen: (isOpen) => setIsTooltipSectionOpen(isOpen),
+        setIs3DSectionOpen: (isOpen) => setIs3DSectionOpen(isOpen),
     };
 
     return (

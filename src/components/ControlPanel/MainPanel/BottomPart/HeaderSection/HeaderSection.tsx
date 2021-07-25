@@ -1,5 +1,5 @@
 import { PanelSection } from "../../../../Common/PanelSection/PanelSection";
 
-export const HeaderSection = () => {
-    return <PanelSection text={"Header"} isOpened={false} />;
+export const HeaderSection = (props: { isOpen: boolean; onToggle: (isOpen: boolean) => void }) => {
+    return <PanelSection text={"Header"} isOpened={props.isOpen} onToggle={props.onToggle} />;
 };
