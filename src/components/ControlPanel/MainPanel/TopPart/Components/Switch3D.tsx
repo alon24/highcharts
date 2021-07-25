@@ -1,5 +1,5 @@
 import { OnOffSwitch } from "@similarweb/ui-components/dist/on-off-switch";
-import { SwitchContainer } from "./TopPartStyles";
+import { SwitchContainer } from "../TopPartStyles";
 
 export const Switch3D = (props: { is3DGraph: boolean; onSetIs3DGraph(is3d: boolean) }) => {
     const { is3DGraph, onSetIs3DGraph } = props;

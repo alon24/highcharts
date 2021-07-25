@@ -1,7 +1,7 @@
 import React, { FC, useCallback } from "react";
 import { Title } from "../../../Common/Title/Title";
 import { Tabs } from "../../../TopBar/Tabs/Tabs";
-import { TitleContainer, TopPartContainer } from "./TopPartStyles";
+import { DataSelectionContainer, TitleContainer, TopPartContainer } from "./TopPartStyles";
 import { OnOffSwitch } from "@similarweb/ui-components/dist/on-off-switch";
 import {
     DropdownButton,
@@ -10,13 +10,24 @@ import {
 } from "@similarweb/ui-components/dist/dropdown";
 import { useContext } from "react";
 import { AppContext } from "../../../../AppContext/AppContext";
-import { Switch3D } from "./Switch3D";
-import { DataSetSelector } from "./DataSetSelector";
+import { Switch3D } from "./Components/Switch3D";
+import { DataSetDropdown } from "./Components/DataSetDropdown";
+import { SeriesCounter } from "./Components/SeriesCounter";
+import { DataSet } from "../../../../AppTypes";
 
 export const TopPart: React.FunctionComponent = () => {
-    const { panelTab, setPanelTab, is3DGraph, setIs3DGraph, dataSet, setDataSet } = useContext(
-        AppContext,
-    );
+    const {
+        panelTab,
+        setPanelTab,
+        is3DGraph,
+        setIs3DGraph,
+        dataSet,
+        setDataSet,
+        seriesCount,
+        setSeriesCount,
+    } = useContext(AppContext);
+
+    const dataSetOptions = ["Gender", "Traffic"] as DataSet[];
 
     return (
         <TopPartContainer>
@@ -25,11 +36,18 @@ export const TopPart: React.FunctionComponent = () => {
                 <Title text={"Chart Type"} />
             </TitleContainer>
             <Switch3D is3DGraph={is3DGraph} onSetIs3DGraph={() => setIs3DGraph(!is3DGraph)} />
-            <DataSetSelector
-                selectedDataSet={dataSet}
-                onSelectDataSet={(dataSet) => setDataSet(dataSet)}
-                options={["Gender", "Traffic"]}
-            />
+            <DataSelectionContainer>
+                <DataSetDropdown
+                    selectedDataSet={dataSet}
+                    onSelectDataSet={(dataSet) => setDataSet(dataSet)}
+                    options={dataSetOptions}
+                />
+                <SeriesCounter
+                    seriesCount={seriesCount}
+                    onSetSeriesCount={(count) => setSeriesCount(count)}
+                    maxAllowedCount={dataSetOptions.length}
+                />
+            </DataSelectionContainer>
         </TopPartContainer>
     );
 };

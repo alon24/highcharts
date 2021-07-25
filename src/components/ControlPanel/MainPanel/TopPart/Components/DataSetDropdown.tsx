@@ -3,11 +3,10 @@ import {
     Dropdown,
     SimpleDropdownItem,
 } from "@similarweb/ui-components/dist/dropdown";
-import { DataSet } from "../../../../AppTypes";
-import { DropdownContainer } from "../../../Common/DropdownContainer/DropdownContainer";
-import { DataSelectorContainer } from "./TopPartStyles";
+import { DataSet } from "../../../../../AppTypes";
+import { DataSetDropdownContainer } from "../TopPartStyles";
 
-export const DataSetSelector = (props: {
+export const DataSetDropdown = (props: {
     selectedDataSet: DataSet;
     onSelectDataSet: (dataSet: DataSet) => void;
     options: DataSet[];
@@ -30,13 +29,13 @@ export const DataSetSelector = (props: {
     ];
 
     return (
-        <DataSelectorContainer>
+        <DataSetDropdownContainer>
             <Dropdown
                 dropdownPopupPlacement={"ontop-left"}
                 onClick={({ id }) => onSelectDataSet(id)}
             >
                 {dropdownItems}
             </Dropdown>
-        </DataSelectorContainer>
+        </DataSetDropdownContainer>
     );
 };

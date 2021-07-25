@@ -13,6 +13,7 @@ export const App: React.FC = () => {
     const [selectedTab, setSelectedTab] = useState<TabType>("Design");
     const [is3DGraph, setIs3DGraph] = useState(false);
     const [dataSet, setDataSet] = useState<DataSet>("Gender");
+    const [seriesCount, setSeriesCount] = useState<number>(2);
 
     const handleSelectGraphType = useCallback(
         (type: GraphType) => {
@@ -42,15 +43,24 @@ export const App: React.FC = () => {
         [setDataSet],
     );
 
+    const handleSetSeriesCount = useCallback(
+        (count: number) => {
+            setSeriesCount(count);
+        },
+        [setSeriesCount],
+    );
+
     const context = {
         panelTab: selectedTab,
         graphType: selectedGraphType,
         is3DGraph: is3DGraph,
+        dataSet: dataSet,
+        seriesCount: seriesCount,
         setPanelTab: handleSelectTab,
         setGraphType: handleSelectGraphType,
         setIs3DGraph: handleSetIs3DGraph,
-        dataSet: dataSet,
         setDataSet: handleSelectDataSet,
+        setSeriesCount: handleSetSeriesCount,
     };
 
     return (
