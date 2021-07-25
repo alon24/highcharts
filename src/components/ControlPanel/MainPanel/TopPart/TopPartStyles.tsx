@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Title } from "../../../Common/Title/Title";
+import { fonts } from "@similarweb/styles";
 
 export const TopPartContainer = styled.div`
     width: 408px;
@@ -25,6 +26,7 @@ export const SwitchContainer = styled.div`
         font-size: 16px;
         font-weight: 400;
         margin-left: 10px;
+        font-family: ${fonts.$robotoFontFamily};
     }
 `;
 
@@ -47,13 +49,14 @@ export const DataSetDropdownContainer = styled.div`
 
 export const SeriesCounterContainer = styled.div`
     height: 24px;
-    width: 120px;
+    width: 140px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     color: #6b7c8c;
     font-size: 16px;
+    font-family: ${fonts.$robotoFontFamily};
     font-weight: 400;
 
     span {
@@ -67,6 +70,7 @@ export const SeriesCounterButtonContainer = styled.div`
     width: 24px;
     color: #6b7c8c;
     font-size: 16px;
+    font-family: ${fonts.$robotoFontFamily};
     font-weight: 400;
     border: 1px solid #e9ebed;
     border-radius: 3px;

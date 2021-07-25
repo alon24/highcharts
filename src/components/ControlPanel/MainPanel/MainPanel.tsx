@@ -8,7 +8,7 @@ export const MainPanel: React.FunctionComponent = () => {
     return (
         <MainPanelContainer>
             <TopPart />
-            <BottomPart glug={true} />
+            <BottomPart />
         </MainPanelContainer>
     );
 };

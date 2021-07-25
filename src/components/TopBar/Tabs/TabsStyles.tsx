@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fonts } from "@similarweb/styles";
 
 export const TabsContainer = styled.div`
     width: 408px;
@@ -25,6 +26,7 @@ export const TabContainer = styled.div<{ isActive: boolean }>`
     span {
         color: ${({ isActive }) => (isActive ? "#3E74FE" : "#6B7C8C")};
         font-size: 14px;
+        font-family: ${fonts.$robotoFontFamily};
         font-weight: 700;
     }
 `;
