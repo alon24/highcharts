@@ -3,7 +3,7 @@ import styled from "styled-components/macro";
 import { Consumer, ConsumerB } from "../src/Consumer/Consumer";
 import { AppContext } from "./AppContext/AppContext";
 import { AppContainer, AppContentContainer } from "./AppStyles";
-import { GraphType, TabType } from "./AppTypes";
+import { DataSet, GraphType, TabType } from "./AppTypes";
 import { ControlPanel } from "./components/ControlPanel/ControlPanel";
 import { GraphPreview } from "./components/GraphPreview/GraphPreview";
 import { TopBar } from "./components/TopBar/TopBar";
@@ -12,6 +12,7 @@ export const App: React.FC = () => {
     const [selectedGraphType, setSelectedGraphType] = useState<GraphType>("Pie");
     const [selectedTab, setSelectedTab] = useState<TabType>("Design");
     const [is3DGraph, setIs3DGraph] = useState(false);
+    const [dataSet, setDataSet] = useState<DataSet>("Gender");
 
     const handleSelectGraphType = useCallback(
         (type: GraphType) => {
@@ -34,6 +35,13 @@ export const App: React.FC = () => {
         [setIs3DGraph],
     );
 
+    const handleSelectDataSet = useCallback(
+        (dataSet: DataSet) => {
+            setDataSet(dataSet);
+        },
+        [setDataSet],
+    );
+
     const context = {
         panelTab: selectedTab,
         graphType: selectedGraphType,
@@ -41,6 +49,8 @@ export const App: React.FC = () => {
         setPanelTab: handleSelectTab,
         setGraphType: handleSelectGraphType,
         setIs3DGraph: handleSetIs3DGraph,
+        dataSet: dataSet,
+        setDataSet: handleSelectDataSet,
     };
 
     return (

@@ -3,12 +3,20 @@ import { Title } from "../../../Common/Title/Title";
 import { Tabs } from "../../../TopBar/Tabs/Tabs";
 import { TitleContainer, TopPartContainer } from "./TopPartStyles";
 import { OnOffSwitch } from "@similarweb/ui-components/dist/on-off-switch";
+import {
+    DropdownButton,
+    Dropdown,
+    SimpleDropdownItem,
+} from "@similarweb/ui-components/dist/dropdown";
 import { useContext } from "react";
 import { AppContext } from "../../../../AppContext/AppContext";
 import { Switch3D } from "./Switch3D";
+import { DataSetSelector } from "./DataSetSelector";
 
 export const TopPart: React.FunctionComponent = () => {
-    const { panelTab, setPanelTab, is3DGraph, setIs3DGraph } = useContext(AppContext);
+    const { panelTab, setPanelTab, is3DGraph, setIs3DGraph, dataSet, setDataSet } = useContext(
+        AppContext,
+    );
 
     return (
         <TopPartContainer>
@@ -17,6 +25,11 @@ export const TopPart: React.FunctionComponent = () => {
                 <Title text={"Chart Type"} />
             </TitleContainer>
             <Switch3D is3DGraph={is3DGraph} onSetIs3DGraph={() => setIs3DGraph(!is3DGraph)} />
+            <DataSetSelector
+                selectedDataSet={dataSet}
+                onSelectDataSet={(dataSet) => setDataSet(dataSet)}
+                options={["Gender", "Traffic"]}
+            />
         </TopPartContainer>
     );
 };
