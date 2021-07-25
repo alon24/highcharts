@@ -3,22 +3,28 @@ import { SidePanelButton } from "./SidePanelButton/SidePanelButton";
 import { SidePanelContainer } from "./SidePanelStyles";
 import { ISidePanelProps } from "./SidePanelTypes";
 import { GraphType } from "../../Main/MainTypes";
-import DounghtChart from "../../../media/pie-chart.svg";
+import DonutChart from "../../../media/donut-chart.svg";
 import LineChart from "../../../media/line-chart.svg";
 import BarChart from "../../../media/bar-chart.svg";
+import DonutChartSelected from "../../../media/donut-chart-white.svg";
+import LineChartSelected from "../../../media/line-chart-white.svg";
+import BarChartSelected from "../../../media/bar-chart-white.svg";
 
 const buttonsConfig = [
     {
         type: "Doughnut" as GraphType,
-        imageSrc: DounghtChart,
+        imageSrc: DonutChart,
+        imageSelectedSrc: DonutChartSelected,
     },
     {
         type: "Bar" as GraphType,
         imageSrc: BarChart,
+        imageSelectedSrc: BarChartSelected,
     },
     {
         type: "Line" as GraphType,
         imageSrc: LineChart,
+        imageSelectedSrc: LineChartSelected,
     },
 ];
 
@@ -37,6 +43,7 @@ export const SidePanel: FC<ISidePanelProps> = (props) => {
                     graphType={buttonDetails.type}
                     onClick={handleButtonClick}
                     imageSrc={buttonDetails.imageSrc}
+                    imageSelectedSrc={buttonDetails.imageSelectedSrc}
                     altText={buttonDetails.type}
                     isActive={buttonDetails.type === selectedGraphType}
                 />
