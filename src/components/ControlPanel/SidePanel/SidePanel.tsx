@@ -9,6 +9,8 @@ import DonutChartSelected from "../../../media/donut-chart-white.svg";
 import LineChartSelected from "../../../media/line-chart-white.svg";
 import BarChartSelected from "../../../media/bar-chart-white.svg";
 import { GraphType } from "../../../AppTypes";
+import { useContext } from "react";
+import { AppContext } from "../../../AppContext/AppContext";
 
 const buttonsConfig = [
     {
@@ -28,11 +30,11 @@ const buttonsConfig = [
     },
 ];
 
-export const SidePanel: FC<ISidePanelProps> = (props) => {
-    const { onSelectGraphType, selectedGraphType } = props;
+export const SidePanel: FC = () => {
+    const { graphType, setGraphType } = useContext(AppContext);
 
     const handleButtonClick = useCallback((graphType: GraphType) => {
-        onSelectGraphType && onSelectGraphType(graphType);
+        setGraphType && setGraphType(graphType);
     }, []);
 
     const Buttons = useMemo(() => {
@@ -45,11 +47,11 @@ export const SidePanel: FC<ISidePanelProps> = (props) => {
                     imageSrc={buttonDetails.imageSrc}
                     imageSelectedSrc={buttonDetails.imageSelectedSrc}
                     altText={buttonDetails.type}
-                    isActive={buttonDetails.type === selectedGraphType}
+                    isActive={buttonDetails.type === graphType}
                 />
             );
         });
-    }, [selectedGraphType, handleButtonClick]);
+    }, [graphType, handleButtonClick]);
 
     return <SidePanelContainer>{Buttons}</SidePanelContainer>;
 };

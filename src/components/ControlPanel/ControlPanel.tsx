@@ -4,16 +4,11 @@ import { SidePanel } from "./SidePanel/SidePanel";
 import { IControlPanelProps } from "./ControlPanelTypes";
 import { MainPanel } from "./MainPanel/MainPanel";
 
-export const ControlPanel: FC<IControlPanelProps> = (props) => {
-    const { selectedGraphType, onSelectGraphType, selectedTab, onSelectTab } = props;
-
+export const ControlPanel: FC = () => {
     return (
         <ControlPanelContainer>
-            <SidePanel
-                selectedGraphType={selectedGraphType}
-                onSelectGraphType={onSelectGraphType}
-            />
-            <MainPanel selectedTab={selectedTab} onSelectTab={onSelectTab} />
+            <SidePanel />
+            <MainPanel />
         </ControlPanelContainer>
     );
 };

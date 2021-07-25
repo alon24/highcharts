@@ -4,12 +4,10 @@ import { MainPanelContainer } from "./MainPanelStyles";
 import { IMainPanelProps } from "./MainPanelTypes";
 import { TopPart } from "./TopPart/TopPart";
 
-export const MainPanel: React.FunctionComponent<IMainPanelProps> = (props) => {
-    const { selectedTab, onSelectTab } = props;
-
+export const MainPanel: React.FunctionComponent = () => {
     return (
         <MainPanelContainer>
-            <TopPart selectedTab={selectedTab} onSelectTab={onSelectTab} />
+            <TopPart />
             <BottomPart glug={true} />
         </MainPanelContainer>
     );
