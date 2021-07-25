@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import { Home } from "./pages/Home";
-import styles from "./styles/globale";
 import { Display } from "./components/Display";
 import { Wrapper, Text } from "./components/styles";
 import { Editor, IEditor } from "./components/Editor";
