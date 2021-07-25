@@ -30,7 +30,7 @@ export const PanelTransitionContainerStyled = styled.div.attrs<{
  */
 export const PanelToggleWrapperStyled = styled.div`
     padding: 0;
-    margin: 0 10px;
+    margin: 0 10px 0 0;
 `;
 
 /**
@@ -44,7 +44,7 @@ export const PanelToggleStyled = styled.div<{ hasTopBorder: boolean }>`
     font-family: ${fonts.$robotoFontFamily};
     font-weight: 400;
     color: #092540;
-    padding: 15px 0 15px 7px;
+    padding: 15px 0 15px 0;
     letter-spacing: 0.7px;
     cursor: pointer;
     display: flex;
