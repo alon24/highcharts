@@ -1,3 +1,6 @@
+import { TabType } from "../../../../AppTypes";
+
 export interface ITopPartProps {
-    glug: boolean;
+    selectedTab: TabType;
+    onSelectTab: (tab: TabType) => void;
 }

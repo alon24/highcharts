@@ -5,7 +5,7 @@ import { IControlPanelProps } from "./ControlPanelTypes";
 import { MainPanel } from "./MainPanel/MainPanel";
 
 export const ControlPanel: FC<IControlPanelProps> = (props) => {
-    const { selectedGraphType, onSelectGraphType } = props;
+    const { selectedGraphType, onSelectGraphType, selectedTab, onSelectTab } = props;
 
     return (
         <ControlPanelContainer>
@@ -13,7 +13,7 @@ export const ControlPanel: FC<IControlPanelProps> = (props) => {
                 selectedGraphType={selectedGraphType}
                 onSelectGraphType={onSelectGraphType}
             />
-            <MainPanel />
+            <MainPanel selectedTab={selectedTab} onSelectTab={onSelectTab} />
         </ControlPanelContainer>
     );
 };

@@ -1,3 +1,6 @@
+import { TabType } from "../../../AppTypes";
+
 export interface IMainPanelProps {
-    lol: boolean;
+    selectedTab: TabType;
+    onSelectTab: (tab: TabType) => void;
 }
