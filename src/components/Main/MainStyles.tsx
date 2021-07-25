@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
     background-color: #f6f9fc;
 `;
 
-export const PanelContainer = styled.div`
+export const ContentContainer = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 `;

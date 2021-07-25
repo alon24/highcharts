@@ -1,8 +1,9 @@
 import React, { FC, useState } from "react";
 import { useCallback } from "react";
 import { ControlPanel } from "../ControlPanel/ControlPanel";
+import { GraphPreview } from "../GraphPreview/GraphPreview";
 import { TopBar } from "../TopBar/TopBar";
-import { MainContainer } from "./MainStyles";
+import { ContentContainer, MainContainer } from "./MainStyles";
 import { GraphType } from "./MainTypes";
 
 export const Main: FC = () => {
@@ -18,10 +19,13 @@ export const Main: FC = () => {
     return (
         <MainContainer>
             <TopBar />
-            <ControlPanel
-                onSelectGraphType={handleSelectGraphType}
-                selectedGraphType={selectedGraphType}
-            />
+            <ContentContainer>
+                <ControlPanel
+                    onSelectGraphType={handleSelectGraphType}
+                    selectedGraphType={selectedGraphType}
+                />
+                <GraphPreview glug={true} />
+            </ContentContainer>
         </MainContainer>
     );
 };
