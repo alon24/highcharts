@@ -11,6 +11,7 @@ export const ButtonContainer = styled.div<{ isActive: boolean }>`
 
     &:hover {
         background-color: ${({ isActive }) => (isActive ? "#195AFE" : "#cbd1d7")};
+        cursor: pointer;
     }
 `;
 
