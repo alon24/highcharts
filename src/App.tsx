@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { Home } from "./pages/Home";
-import { Display } from "./components/Display";
-import { Wrapper, Text } from "./components/styles";
-import { Editor, IEditor } from "./components/Editor";
 import { About } from "./pages/About";
 import { GraphComponents } from "./pages/GraphComponents";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";

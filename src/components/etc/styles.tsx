@@ -1,11 +1,10 @@
-import { PageText as NavText } from "../helpers/PageText";
 import styled from "styled-components/macro";
-import { PageItemWrapper as NavItemWrapper } from "../helpers/ItemWrapper";
+import { PageItemWrapper as NavItemWrapper } from "../../helpers/ItemWrapper";
 
-export const Text = styled(NavText)`
-    color: ${(props) => (props.color ? props.color : "#ffffff")};
-    font-size: ${(props) => (props.fontSize ? props.fontSize : ".9em")};
-`;
+// export const Text = styled(NavText)`
+//     color: ${(props) => (props.color ? props.color : "#ffffff")};
+//     font-size: ${(props) => (props.fontSize ? props.fontSize : ".9em")};
+// `;
 
 export const Wrapper = styled(NavItemWrapper)`
     display: flex;
