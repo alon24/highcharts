@@ -49,8 +49,3 @@ export const ConsumerB = () => {
         </ChartContextProvider>
     );
 };
-/*
-AKIA42MSNAK5RZFVF6HL
-
-I50mUKhOc4wYj4PgsLjxyvbtQyJ8aqdjwaIfMqCX
- */
