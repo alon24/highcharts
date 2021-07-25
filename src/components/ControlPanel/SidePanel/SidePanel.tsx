@@ -7,7 +7,7 @@ import DounghtChart from "../../../media/pie-chart.svg";
 import LineChart from "../../../media/line-chart.svg";
 import BarChart from "../../../media/bar-chart.svg";
 
-const buttonsDetails = [
+const buttonsConfig = [
     {
         type: "Doughnut" as GraphType,
         imageSrc: DounghtChart,
@@ -30,7 +30,7 @@ export const SidePanel: FC<ISidePanelProps> = (props) => {
     }, []);
 
     const Buttons = useMemo(() => {
-        return buttonsDetails.map((buttonDetails) => {
+        return buttonsConfig.map((buttonDetails) => {
             return (
                 <SidePanelButton
                     key={buttonDetails.type}
