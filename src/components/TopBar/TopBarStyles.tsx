@@ -5,11 +5,12 @@ export const TopBarContainer = styled.div`
     height: 96px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    background-color: #d6e4f2;
 `;
 
 export const TopBarLogo = styled.img`
-    width: 100%;
-    height: 100%;
+    height: 48px;
+    padding: 17px 0 17px 33px;
 `;
