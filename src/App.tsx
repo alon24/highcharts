@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components/macro";
-import { Home } from "./pages/Home";
-import styles from "./styles/globale";
-import { Display } from "./components/Display";
-import { Wrapper, Text } from "./components/styles";
-import { Editor, IEditor } from "./components/Editor";
 import { Consumer, ConsumerB } from "../src/Consumer/Consumer";
+import { Main } from "./components/Main/Main";
 
 export const Container = styled.div`
     display: flex;
@@ -15,31 +11,14 @@ export const Container = styled.div`
     background-color: #131a22;
 `;
 
-const App: React.FC = () => {
-    return (
-        <>
-            <Consumer />
-            <br />
-            <br />
-            <ConsumerB />
-        </>
-    );
-    const [data, setData] = useState("");
-
-    function handleChange(data: string) {
-        setData(JSON.parse(data));
-    }
-
-    return (
-        <>
-            <Container>
-                <Wrapper alignItems="center">
-                    <h1>Demo1</h1>
-                    <Editor onChange={handleChange} />
-                    <Display data={data} />
-                </Wrapper>
-            </Container>
-        </>
-    );
+export const App: React.FC = () => {
+    return <Main />;
+    // return (
+    //     <>
+    //         <Consumer />
+    //         <br />
+    //         <br />
+    //         <ConsumerB />
+    //     </>
+    // );
 };
-export default App;
