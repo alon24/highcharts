@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.div`
+export const AppContainer = styled.div`
     display: flex;
     flex-direction: column;
     width: 100vw;
@@ -8,7 +8,7 @@ export const MainContainer = styled.div`
     background-color: #f6f9fc;
 `;
 
-export const ContentContainer = styled.div`
+export const AppContentContainer = styled.div`
     display: flex;
     flex-direction: row;
 `;

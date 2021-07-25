@@ -1,4 +1,4 @@
-import { GraphType } from "../Main/MainTypes";
+import { GraphType } from "../../AppTypes";
 
 export interface IControlPanelProps {
     selectedGraphType: GraphType;

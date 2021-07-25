@@ -1,4 +1,4 @@
-import { GraphType } from "../../Main/MainTypes";
+import { GraphType } from "../../../AppTypes";
 
 export interface ISidePanelProps {
     onSelectGraphType: (type: GraphType) => void;

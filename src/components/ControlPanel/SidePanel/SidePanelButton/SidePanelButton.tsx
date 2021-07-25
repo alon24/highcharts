@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import { GraphType } from "../../../Main/MainTypes";
 import { ButtonContainer, ButtonImage } from "./SidePanelButtonStyles";
 import { ISidePanelButtonProps } from "./SidePanelButtonTypes";
 
