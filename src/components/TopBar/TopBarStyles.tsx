@@ -7,7 +7,7 @@ export const TopBarContainer = styled.div`
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: #d6e4f2;
+    background-color: #16275d;
 `;
 
 export const TopBarLogo = styled.img`
