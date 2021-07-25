@@ -10,7 +10,7 @@ export const ButtonContainer = styled.div<{ isActive: boolean }>`
     transition: background-color 200ms;
 
     &:hover {
-        background-color: ${({ isActive }) => (isActive ? "#94B2FE" : "#cbd1d7")};
+        background-color: ${({ isActive }) => (isActive ? "#195AFE" : "#cbd1d7")};
     }
 `;
 

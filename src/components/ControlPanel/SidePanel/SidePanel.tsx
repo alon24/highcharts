@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useMemo } from "react";
 import { SidePanelButton } from "./SidePanelButton/SidePanelButton";
 import { SidePanelContainer } from "./SidePanelStyles";
 import { ISidePanelProps } from "./SidePanelTypes";
@@ -7,6 +7,21 @@ import DounghtChart from "../../../media/pie-chart.svg";
 import LineChart from "../../../media/line-chart.svg";
 import BarChart from "../../../media/bar-chart.svg";
 
+const buttonsDetails = [
+    {
+        type: "Doughnut" as GraphType,
+        imageSrc: DounghtChart,
+    },
+    {
+        type: "Bar" as GraphType,
+        imageSrc: BarChart,
+    },
+    {
+        type: "Line" as GraphType,
+        imageSrc: LineChart,
+    },
+];
+
 export const SidePanel: FC<ISidePanelProps> = (props) => {
     const { onSelectGraphType, selectedGraphType } = props;
 
@@ -14,29 +29,20 @@ export const SidePanel: FC<ISidePanelProps> = (props) => {
         onSelectGraphType && onSelectGraphType(graphType);
     }, []);
 
-    return (
-        <SidePanelContainer>
-            <SidePanelButton
-                graphType={"Doughnut"}
-                onClick={handleButtonClick}
-                imageSrc={DounghtChart}
-                altText="Dounght"
-                isActive={selectedGraphType === "Doughnut"}
-            />
-            <SidePanelButton
-                graphType={"Bar"}
-                onClick={handleButtonClick}
-                imageSrc={BarChart}
-                altText="Bar"
-                isActive={selectedGraphType === "Bar"}
-            />
-            <SidePanelButton
-                graphType={"Line"}
-                onClick={handleButtonClick}
-                imageSrc={LineChart}
-                altText="Line"
-                isActive={selectedGraphType === "Line"}
-            />
-        </SidePanelContainer>
-    );
+    const Buttons = useMemo(() => {
+        return buttonsDetails.map((buttonDetails) => {
+            return (
+                <SidePanelButton
+                    key={buttonDetails.type}
+                    graphType={buttonDetails.type}
+                    onClick={handleButtonClick}
+                    imageSrc={buttonDetails.imageSrc}
+                    altText={buttonDetails.type}
+                    isActive={buttonDetails.type === selectedGraphType}
+                />
+            );
+        });
+    }, [selectedGraphType, handleButtonClick]);
+
+    return <SidePanelContainer>{Buttons}</SidePanelContainer>;
 };
