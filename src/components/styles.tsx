@@ -13,14 +13,15 @@ export const Wrapper = styled(NavItemWrapper)`
     align-items: ${(props) => (props.alignItems ? props.alignItems : "flex-start")};
     padding: 0.1em;
     cursor: pointer;
-    border: 1px solid #131a22;
+    //border: 1px solid #131a22;
+    flex: 1;
 
-    &:hover {
-        border: 1px solid #ffffff;
-        border-radius: 0.2em;
-    }
-    @media (max-width: 850px) {
-        display: none;
-    }
+    //&:hover {
+    //    border: 1px solid #ffffff;
+    //    border-radius: 0.2em;
+    //}
+    //@media (max-width: 850px) {
+    //    display: none;
+    //}
 `;
 // Wrapper.displayName = "ObjectWrapper";

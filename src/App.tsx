@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
 import { Home } from "./pages/Home";
-import styles from "./styles/globale";
 import { Display } from "./components/Display";
 import { Wrapper, Text } from "./components/styles";
 import { Editor, IEditor } from "./components/Editor";
@@ -9,14 +8,13 @@ import { About } from "./pages/About";
 import { GraphComponents } from "./pages/GraphComponents";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Page404 } from "./pages/Page404";
-import { Nav } from "./components/Nav";
 
 const App: React.FC = () => {
     return (
         <>
             <Router>
                 <div>
-                    <Nav />
+                    {/*<Nav />*/}
                     <Switch>
                         <Route exact component={Home} path="/" />
                         <Route exact component={About} path="/about" />
