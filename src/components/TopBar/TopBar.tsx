@@ -1,6 +1,11 @@
 import React, { FC } from "react";
-import { TopBarContainer } from "./TopBarStyles";
+import { TopBarContainer, TopBarLogo } from "./TopBarStyles";
+import BarChartSelected from "../../../media/bar-chart-white.svg";
 
 export const TopBar: FC = (props) => {
-    return <TopBarContainer>{"Similar Metric"}</TopBarContainer>;
+    return (
+        <TopBarContainer>
+            <TopBarLogo />
+        </TopBarContainer>
+    );
 };

@@ -8,3 +8,8 @@ export const TopBarContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
 `;
+
+export const TopBarLogo = styled.img`
+    width: 100%;
+    height: 100%;
+`;
