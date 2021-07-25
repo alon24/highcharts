@@ -13,4 +13,12 @@ export const Container = styled.div`
 
 export const App: React.FC = () => {
     return <Main />;
+    // return (
+    //     <>
+    //         <Consumer />
+    //         <br />
+    //         <br />
+    //         <ConsumerB />
+    //     </>
+    // );
 };
