@@ -29,7 +29,7 @@ export const App: React.FC = () => {
      * Header Section Props
      */
     const [chartTitle, setChartTitle] = useState("Chart Title");
-    const [chartTooltip, setChartTooltip] = useState<string>(null);
+    const [chartTooltip, setChartTooltip] = useState<string>("info");
     const [hasPeriod, setHasPeriod] = useState(true);
     const [hasCountry, setHasCountry] = useState(true);
     const [hasTrafficSource, setHasTrafficSource] = useState(true);
