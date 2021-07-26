@@ -17,6 +17,7 @@ export const BottomPart: React.FunctionComponent = () => {
         isGraphSectionOpen,
         isLegendSectionOpen,
         is3DSectionOpen,
+        is3DGraph,
         isTooltipSectionOpen,
         setIsHeaderSectionOpen,
         setIsGraphSectionOpen,
@@ -34,7 +35,11 @@ export const BottomPart: React.FunctionComponent = () => {
             <LegendSection isOpen={isLegendSectionOpen} onToggle={setIsLegendSectionOpen} />
             <GraphSection isOpen={isGraphSectionOpen} onToggle={setIsGraphSectionOpen} />
             <TooltipSection isOpen={isTooltipSectionOpen} onToggle={setIsTooltipSectionOpen} />
-            <ThreeDimSection isOpen={is3DSectionOpen} onToggle={setIs3DSectionOpen} />
+            <ThreeDimSection
+                isOpen={is3DSectionOpen}
+                onToggle={setIs3DSectionOpen}
+                disabled={!is3DGraph}
+            />
         </BottomPartContainer>
     );
 };
