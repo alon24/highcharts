@@ -46,10 +46,11 @@ const buttonsConfig = [
 ];
 
 export const SidePanel: FC = () => {
-    const { graphType, setGraphType } = useContext(AppContext);
+    const { graphType, setGraphType, closeAllSections } = useContext(AppContext);
 
     const handleButtonClick = useCallback((graphType: GraphType) => {
         setGraphType && setGraphType(graphType);
+        closeAllSections();
     }, []);
 
     const Buttons = useMemo(() => {

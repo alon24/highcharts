@@ -74,6 +74,13 @@ export const App: React.FC = () => {
         setIsGraphSectionOpen: (isOpen) => setIsGraphSectionOpen(isOpen),
         setIsTooltipSectionOpen: (isOpen) => setIsTooltipSectionOpen(isOpen),
         setIs3DSectionOpen: (isOpen) => setIs3DSectionOpen(isOpen),
+        closeAllSections: () => {
+            setIsHeaderSectionOpen(false);
+            setIsLegendSectionOpen(false);
+            setIsGraphSectionOpen(false);
+            setIsTooltipSectionOpen(false);
+            setIs3DSectionOpen(false);
+        },
 
         chartTitle: chartTitle,
         chartTooltip: chartTooltip,

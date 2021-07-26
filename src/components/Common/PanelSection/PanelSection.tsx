@@ -17,7 +17,7 @@ export const PanelSection: FC<IPanelSectionProps> = (props) => {
                 text={props.text}
                 onClick={() => props.onToggle(!props.isOpened)}
             />
-            <Collapsible isActive={props.isOpened}>{"Hello world"}</Collapsible>
+            <Collapsible isActive={props.isOpened}>{props.children}</Collapsible>
         </PanelContainer>
     );
 };

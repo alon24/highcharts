@@ -31,6 +31,7 @@ export interface IAppContext {
     setIsGraphSectionOpen: (isOpen: boolean) => void;
     setIsTooltipSectionOpen: (isOpen: boolean) => void;
     setIs3DSectionOpen: (isOpen: boolean) => void;
+    closeAllSections: () => void;
 
     /**
      * Header Section Props
@@ -94,6 +95,7 @@ export const AppContext = React.createContext<IAppContext>({
     setIsGraphSectionOpen: noopFunc,
     setIsTooltipSectionOpen: noopFunc,
     setIs3DSectionOpen: noopFunc,
+    closeAllSections: noopFunc,
 
     chartTitle: "Chart Title",
     hasPeriod: true,
