@@ -87,9 +87,9 @@ export const App: React.FC = () => {
         isPng,
         isExcel,
         isDashboard,
-        setIsPng: () => setIsPng(!isPng),
-        setIsExcel: () => setIsExcel(!isExcel),
-        setIsDashboard: () => setIsDashboard(!isDashboard),
+        setIsPng: (enabledState) => setIsPng(enabledState),
+        setIsExcel: (enabledState) => setIsExcel(enabledState),
+        setIsDashboard: (enabledState) => setIsDashboard(enabledState),
 
         chartTitle: chartTitle,
         chartTooltip: chartTooltip,

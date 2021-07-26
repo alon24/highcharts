@@ -31,6 +31,14 @@ export const HeaderSection = (props: { isOpen: boolean; onToggle: (isOpen: boole
 
     const [buttonsEnabed, setButtonsEnabled] = useState(true);
 
+    function handleButtonsSwitch() {
+        setButtonsEnabled(!buttonsEnabed);
+        if (buttonsEnabed) {
+            setIsPng(false);
+            setIsExcel(false);
+            setIsDashboard(false);
+        }
+    }
     return (
         <PanelSection text={"Header"} isOpened={props.isOpen} onToggle={props.onToggle}>
             <HeaderSectionContainer>
@@ -51,33 +59,31 @@ export const HeaderSection = (props: { isOpen: boolean; onToggle: (isOpen: boole
                     />
                 </InputContainer>
                 <ButtonsSwitchContainer>
-                    <OnOffSwitch
-                        isSelected={buttonsEnabed}
-                        onClick={() => setButtonsEnabled(!buttonsEnabed)}
-                    />
+                    <OnOffSwitch isSelected={buttonsEnabed} onClick={handleButtonsSwitch} />
                     <p>Buttons</p>
                 </ButtonsSwitchContainer>
-
-                <ButtonsContainer>
-                    <LegendWithValue
-                        onClick={setIsPng}
-                        text="PNG"
-                        labelColor={"#3E74FE"}
-                        isChecked={isPng}
-                    />
-                    <LegendWithValue
-                        onClick={setIsExcel}
-                        text="Excel"
-                        labelColor={"#3E74FE"}
-                        isChecked={isExcel}
-                    />
-                    <LegendWithValue
-                        onClick={setIsDashboard}
-                        text="Dashboard"
-                        labelColor={"#3E74FE"}
-                        isChecked={isDashboard}
-                    />
-                </ButtonsContainer>
+                {buttonsEnabed && (
+                    <ButtonsContainer>
+                        <LegendWithValue
+                            onClick={() => setIsPng(!isPng)}
+                            text="PNG"
+                            labelColor={"#3E74FE"}
+                            isChecked={isPng}
+                        />
+                        <LegendWithValue
+                            onClick={() => setIsExcel(!isExcel)}
+                            text="Excel"
+                            labelColor={"#3E74FE"}
+                            isChecked={isExcel}
+                        />
+                        <LegendWithValue
+                            onClick={() => setIsDashboard(!isDashboard)}
+                            text="Dashboard"
+                            labelColor={"#3E74FE"}
+                            isChecked={isDashboard}
+                        />
+                    </ButtonsContainer>
+                )}
             </HeaderSectionContainer>
         </PanelSection>
     );

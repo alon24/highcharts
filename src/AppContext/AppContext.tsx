@@ -49,9 +49,9 @@ export interface IAppContext {
     isPng: boolean;
     isExcel: boolean;
     isDashboard: boolean;
-    setIsPng: () => void;
-    setIsExcel: () => void;
-    setIsDashboard: () => void;
+    setIsPng: (enabledState) => void;
+    setIsExcel: (enabledState) => void;
+    setIsDashboard: (enabledState) => void;
     /**
      * Legend Section Props
      */
