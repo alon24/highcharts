@@ -1,7 +1,7 @@
 import { baseConfig } from "./baseConfig";
 import { useChartContext } from "../../context/context";
 
-export const baseDonutConfig = (chartData) => {
+export const basePieConfig = (chartData) => {
     const { chart } = useChartContext();
     const { threeDimensions } = chart;
     const { is3D, alpha, beta, depth } = threeDimensions;
@@ -17,7 +17,6 @@ export const baseDonutConfig = (chartData) => {
         },
         series: [
             {
-                innerSize: "65%",
                 showInLegend: true,
                 dataLabels: {
                     enabled: false,

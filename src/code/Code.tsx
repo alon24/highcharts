@@ -1,6 +1,6 @@
 export const Code = () => {
     return (
-        <p>{`    const legendItems = [
+        <p style={{ width: "80%" }}>{`    const legendItems = [
         { label: "Series A", color: "#38618C" },
         { label: "Series B", color: "#41C8BB" },
         { label: "Series C", color: "#FF9A47" },
