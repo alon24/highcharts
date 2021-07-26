@@ -1,6 +1,5 @@
 import { SWReactIcons } from "@similarweb/icons";
 import { ICollapsibleToggleProps } from "@similarweb/ui-components/dist/collapsible";
-import * as PropTypes from "prop-types";
 import React from "react";
 import { FunctionComponent } from "react";
 import { PanelToggleStyled, PanelToggleWrapperStyled } from "./PanelSectionStyles";
@@ -11,11 +10,11 @@ import { PanelToggleStyled, PanelToggleWrapperStyled } from "./PanelSectionStyle
  * collapse / uncollapse logic should be implemented by providing an onClick handler.
  */
 export const PanelSectionToggle: FunctionComponent<ICollapsibleToggleProps> = (props) => {
-    const { text, isActive, onClick, disabled } = props;
+    const { text, isActive, onClick } = props;
 
     return (
         <PanelToggleWrapperStyled onClick={onClick}>
-            <PanelToggleStyled hasTopBorder={false} disabled={disabled}>
+            <PanelToggleStyled hasTopBorder={false}>
                 {text}
                 <CollapsibleToggleIcon isActive={isActive} />
             </PanelToggleStyled>

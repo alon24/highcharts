@@ -32,8 +32,11 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
         isDashboard,
         chartTitle,
         chartTooltip,
+        alphaAngle,
+        betaAngle,
+        depth,
     } = useAppContext();
-    const threeDimensions = { is3D: is3DGraph, alpha: 65, beta: 30, depth: 100 };
+    const threeDimensions = { is3D: is3DGraph, alpha: alphaAngle, beta: betaAngle, depth: depth };
     return (
         <>
             <br />
