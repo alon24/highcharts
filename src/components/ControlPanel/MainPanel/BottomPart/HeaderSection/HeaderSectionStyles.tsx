@@ -12,3 +12,19 @@ export const InputContainer = styled.div`
     font-family: ${fonts.$robotoFontFamily};
     font-size: 12px;
 `;
+
+export const ButtonsSwitchContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    font-family: ${fonts.$robotoFontFamily};
+    font-size: 16px;
+    align-items: center;
+`;
+
+export const ButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    font-family: ${fonts.$robotoFontFamily};
+    font-size: 12px;
+    margin: 10px 0;
+`;
