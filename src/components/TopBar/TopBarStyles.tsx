@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TopBarContainer = styled.div`
     width: 100%;
     height: 96px;
+    min-height: 96px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;

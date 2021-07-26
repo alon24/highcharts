@@ -33,6 +33,9 @@ export const App: React.FC = () => {
     const [hasPeriod, setHasPeriod] = useState(true);
     const [hasCountry, setHasCountry] = useState(true);
     const [hasTrafficSource, setHasTrafficSource] = useState(true);
+    const [isPng, setIsPng] = useState(true);
+    const [isExcel, setIsExcel] = useState(true);
+    const [isDashboard, setIsDashboard] = useState(true);
 
     /**
      * Legend Section Props
@@ -81,6 +84,12 @@ export const App: React.FC = () => {
             setIsTooltipSectionOpen(false);
             setIs3DSectionOpen(false);
         },
+        isPng,
+        isExcel,
+        isDashboard,
+        setIsPng: () => setIsPng(!isPng),
+        setIsExcel: () => setIsExcel(!isExcel),
+        setIsDashboard: () => setIsDashboard(!isDashboard),
 
         chartTitle: chartTitle,
         chartTooltip: chartTooltip,

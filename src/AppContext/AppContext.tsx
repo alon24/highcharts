@@ -46,7 +46,12 @@ export interface IAppContext {
     setHasPeriod: (hasPeriod: boolean) => void;
     setHasCountry: (hasCountry: boolean) => void;
     setHasTrafficSource: (hasTrafficSource: boolean) => void;
-
+    isPng: boolean;
+    isExcel: boolean;
+    isDashboard: boolean;
+    setIsPng: () => void;
+    setIsExcel: () => void;
+    setIsDashboard: () => void;
     /**
      * Legend Section Props
      */
@@ -95,6 +100,12 @@ export const AppContext = React.createContext<IAppContext>({
     setIsGraphSectionOpen: noopFunc,
     setIsTooltipSectionOpen: noopFunc,
     setIs3DSectionOpen: noopFunc,
+    isPng: true,
+    isExcel: true,
+    isDashboard: true,
+    setIsPng: noopFunc,
+    setIsExcel: noopFunc,
+    setIsDashboard: noopFunc,
     closeAllSections: noopFunc,
 
     chartTitle: "Chart Title",

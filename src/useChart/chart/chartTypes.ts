@@ -11,9 +11,16 @@ export enum EChartType {
 
 export type IChartComponent = FunctionComponent;
 
+interface IThreeDimensions {
+    is3D: boolean;
+    alpha: number;
+    beta: number;
+    depth: number;
+}
+
 export interface IChart {
     chartData: Record<string, any>[];
     chartType: EChartType;
-    is3D: boolean;
+    threeDimensions: IThreeDimensions;
     overrideConfig?: Record<string, any>;
 }
