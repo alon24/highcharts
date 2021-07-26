@@ -11,11 +11,11 @@ import { PanelToggleStyled, PanelToggleWrapperStyled } from "./PanelSectionStyle
  * collapse / uncollapse logic should be implemented by providing an onClick handler.
  */
 export const PanelSectionToggle: FunctionComponent<ICollapsibleToggleProps> = (props) => {
-    const { text, isActive, onClick } = props;
+    const { text, isActive, onClick, disabled } = props;
 
     return (
         <PanelToggleWrapperStyled onClick={onClick}>
-            <PanelToggleStyled hasTopBorder={false}>
+            <PanelToggleStyled hasTopBorder={false} disabled={disabled}>
                 {text}
                 <CollapsibleToggleIcon isActive={isActive} />
             </PanelToggleStyled>

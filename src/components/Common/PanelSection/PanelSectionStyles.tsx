@@ -38,7 +38,7 @@ export const PanelToggleWrapperStyled = styled.div`
  * The collapser button is the component that is
  * in charge of triggering collapse/uncollapse of the collapsible.
  */
-export const PanelToggleStyled = styled.div<{ hasTopBorder: boolean }>`
+export const PanelToggleStyled = styled.div<{ hasTopBorder: boolean; disabled: boolean }>`
     font-size: 16px;
     height: 16px;
     font-family: ${fonts.$robotoFontFamily};
@@ -53,4 +53,5 @@ export const PanelToggleStyled = styled.div<{ hasTopBorder: boolean }>`
     justify-content: space-between;
     ${(props) =>
         props.hasTopBorder && `box-shadow: inset 0 1px 0 0 ${colorsPalettes.carbon["50"]};`};
+    ${(props) => props.disabled && "color: gray"};
 `;

@@ -7,6 +7,7 @@ import { PanelContainer } from "./PanelSectionStyles";
 interface IPanelSectionProps {
     text: string;
     isOpened: boolean;
+    disabled?: boolean;
     onToggle: (isOpen: boolean) => void;
 }
 export const PanelSection: FC<IPanelSectionProps> = (props) => {
@@ -16,6 +17,7 @@ export const PanelSection: FC<IPanelSectionProps> = (props) => {
                 isActive={props.isOpened}
                 text={props.text}
                 onClick={() => props.onToggle(!props.isOpened)}
+                disabled={props.disabled}
             />
             <Collapsible isActive={props.isOpened}>{props.children}</Collapsible>
         </PanelContainer>
