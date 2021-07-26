@@ -45,7 +45,6 @@ export const TopPart: React.FunctionComponent = () => {
                     maxAllowedCount={5}
                 />
             </DataSelectionContainer>
-            )
         </TopPartContainer>
     );
 };
