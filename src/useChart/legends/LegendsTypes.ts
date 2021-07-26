@@ -7,10 +7,11 @@ export interface ILegends {
     LegendComponent?: ILegendComponent;
 }
 
-type ILegendItems = Array<ILegendItem>;
+export type ILegendItems = Array<ILegendItem>;
 
 interface ILegendItem {
     label: string;
+    checked?: boolean;
     data?: string;
     subtitleText?: string;
     visible?: boolean;

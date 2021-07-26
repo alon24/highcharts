@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { DataSet, GraphType, TabType } from "../AppTypes";
 
 const noopFunc = () => void 0;
@@ -118,3 +118,5 @@ export const AppContext = React.createContext<IAppContext>({
     setBetaAngle: noopFunc,
     setDepth: noopFunc,
 });
+
+export const useAppContext = () => useContext(AppContext);

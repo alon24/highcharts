@@ -1,6 +1,4 @@
-import React, { useCallback, useState } from "react";
-import styled from "styled-components/macro";
-import { Consumer, ConsumerB } from "../src/Consumer/Consumer";
+import React, { useState } from "react";
 import { AppContext } from "./AppContext/AppContext";
 import { AppContainer, AppContentContainer } from "./AppStyles";
 import { DataSet, GraphType, TabType } from "./AppTypes";
@@ -16,7 +14,7 @@ export const App: React.FC = () => {
     const [selectedTab, setSelectedTab] = useState<TabType>("Design");
     const [is3DGraph, setIs3DGraph] = useState(false);
     const [dataSet, setDataSet] = useState<DataSet>("Gender");
-    const [seriesCount, setSeriesCount] = useState<number>(2);
+    const [seriesCount, setSeriesCount] = useState<number>(5);
 
     /**
      * Section Toggles

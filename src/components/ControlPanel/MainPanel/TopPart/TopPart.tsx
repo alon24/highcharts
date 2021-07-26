@@ -17,8 +17,6 @@ import { DataSet } from "../../../../AppTypes";
 
 export const TopPart: React.FunctionComponent = () => {
     const {
-        panelTab,
-        setPanelTab,
         is3DGraph,
         setIs3DGraph,
         dataSet,
@@ -31,7 +29,6 @@ export const TopPart: React.FunctionComponent = () => {
 
     return (
         <TopPartContainer>
-            <Tabs selectedTab={panelTab} onSelectTab={setPanelTab} />
             <TitleContainer>
                 <Title text={"Chart Type"} />
             </TitleContainer>
@@ -45,9 +42,10 @@ export const TopPart: React.FunctionComponent = () => {
                 <SeriesCounter
                     seriesCount={seriesCount}
                     onSetSeriesCount={(count) => setSeriesCount(count)}
-                    maxAllowedCount={dataSetOptions.length}
+                    maxAllowedCount={5}
                 />
             </DataSelectionContainer>
+            )
         </TopPartContainer>
     );
 };
