@@ -24,9 +24,6 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
         graphType,
         seriesCount,
         is3DGraph,
-        setIsExcel,
-        setIsPng,
-        setIsDashboard,
         isExcel,
         isPng,
         isDashboard,
@@ -36,7 +33,15 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
         betaAngle,
         depth,
     } = useAppContext();
-    const threeDimensions = { is3D: is3DGraph, alpha: alphaAngle, beta: betaAngle, depth: depth };
+    const consolidateAlphaAngle = (alphaAngle / 100) * 6 + 2;
+    const consolidateBetaAngle = ((45 + 45) * (betaAngle - 0)) / (100 - 0) - 45;
+    const consolidateDepth = ((100 - 20) * (depth - 0)) / (100 - 0) + 20;
+    const threeDimensions = {
+        is3D: is3DGraph,
+        alpha: consolidateAlphaAngle,
+        beta: consolidateBetaAngle,
+        depth: consolidateDepth,
+    };
     return (
         <>
             <br />
