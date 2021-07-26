@@ -36,7 +36,15 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
         betaAngle,
         depth,
     } = useAppContext();
-    const threeDimensions = { is3D: is3DGraph, alpha: alphaAngle, beta: betaAngle, depth: depth };
+    const consolidateAlphaAngle = (alphaAngle / 100) * 6;
+    const consolidateBetaAngle = (alphaAngle / 100) * 45;
+    const consolidateDepth = (alphaAngle / 100) * 20 + 1;
+    const threeDimensions = {
+        is3D: is3DGraph,
+        alpha: consolidateAlphaAngle,
+        beta: consolidateBetaAngle,
+        depth: consolidateDepth,
+    };
     return (
         <>
             <br />

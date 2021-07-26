@@ -68,7 +68,7 @@ export const Consumer = ({
     const { isPng, isExcel, isDashboard } = isFiltersAndActionItems;
     return (
         <ChartContextProvider>
-            <div style={{ width: "700px", height: "700px" }}>
+            <div style={{ width: "60%", height: "60%" }}>
                 <ChartTitle>{chartTitle.title}</ChartTitle>
                 <div style={{ display: "flex", margin: "10px 0px" }}>
                     <Legends />
