@@ -4,7 +4,7 @@ import { useChartContext } from "../../context/context";
 export const baseBarConfig = (chartData) => {
     const { chart } = useChartContext();
     const { threeDimensions } = chart;
-    const { is3D, alpha, beta } = threeDimensions;
+    const { is3D, alpha, beta, depth } = threeDimensions;
     return {
         ...baseConfig,
         chart: {
@@ -13,6 +13,7 @@ export const baseBarConfig = (chartData) => {
                 enabled: is3D,
                 alpha,
                 beta,
+                depth,
             },
         },
         series: [

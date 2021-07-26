@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { Collapsible, CollapsibleToggle } from "@similarweb/ui-components/dist/collapsible/";
-import styled from "styled-components";
 import { PanelSectionToggle } from "./PanelSectionToggle";
 import { PanelContainer } from "./PanelSectionStyles";
 
@@ -17,7 +16,6 @@ export const PanelSection: FC<IPanelSectionProps> = (props) => {
                 isActive={props.isOpened}
                 text={props.text}
                 onClick={() => props.onToggle(!props.isOpened)}
-                disabled={props.disabled}
             />
             <Collapsible isActive={props.isOpened}>{props.children}</Collapsible>
         </PanelContainer>

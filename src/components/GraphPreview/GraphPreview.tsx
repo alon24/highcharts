@@ -3,7 +3,6 @@ import { GraphPreviewContainer } from "./GraphPreviewStyles";
 import { Consumer } from "../../Consumer/Consumer";
 import { useAppContext } from "../../AppContext/AppContext";
 import { EChartType } from "../../useChart/chart/chartTypes";
-import { LegendWithValue } from "@similarweb/ui-components/dist/legend";
 
 interface IGraphPreviewProps {
     glug: boolean;
@@ -31,30 +30,15 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
         isExcel,
         isPng,
         isDashboard,
+        chartTitle,
+        chartTooltip,
+        alphaAngle,
+        betaAngle,
+        depth,
     } = useAppContext();
-    const threeDimensions = { is3D: is3DGraph, alpha: 65, beta: 30, depth: 100 };
+    const threeDimensions = { is3D: is3DGraph, alpha: alphaAngle, beta: betaAngle, depth: depth };
     return (
         <>
-            <div style={{ padding: "40px", width: "400px" }}>
-                <LegendWithValue
-                    onClick={setIsPng}
-                    text="PNG"
-                    labelColor={"#3E74FE"}
-                    isChecked={isPng}
-                />
-                <LegendWithValue
-                    onClick={setIsExcel}
-                    text="Excel"
-                    labelColor={"#3E74FE"}
-                    isChecked={isExcel}
-                />
-                <LegendWithValue
-                    onClick={setIsDashboard}
-                    text="Dashboard"
-                    labelColor={"#3E74FE"}
-                    isChecked={isDashboard}
-                />
-            </div>
             <br />
             <br />
             <br />
@@ -63,7 +47,7 @@ export const GraphPreview: React.FunctionComponent<IGraphPreviewProps> = (props)
                     chartType={GraphTypeToEnum[graphType]}
                     seriesCount={seriesCount}
                     threeDimensions={threeDimensions}
-                    chartTitle={{ tooltip: "hey he" }}
+                    chartTitle={{ tooltip: chartTooltip, title: chartTitle }}
                     isFiltersAndActionItems={{ isPng, isExcel, isDashboard }}
                 />
             </GraphPreviewContainer>
